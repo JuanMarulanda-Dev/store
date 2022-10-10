@@ -21,8 +21,7 @@ public class InvoiceItem  {
 
     @Column(name = "product_id")
     private Long productId;
-
-
+    
     @Transient
     private Double subTotal;
 

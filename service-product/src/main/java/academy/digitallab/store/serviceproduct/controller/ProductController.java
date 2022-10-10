@@ -59,12 +59,13 @@ public class ProductController {
 
     @PostMapping
     public ResponseEntity<Product> createProduct(@Valid @RequestBody Product product, BindingResult result){
-        if (result.hasErrors()){
+        throw new IllegalArgumentException("message");
+        /*if (result.hasErrors()){
             String message = this.formatMessage(result);
             throw new IllegalArgumentException(message);
         }
         Product productCreate =  productService.createProduct(product);
-        return ResponseEntity.status(HttpStatus.CREATED).body(productCreate);
+        return ResponseEntity.status(HttpStatus.CREATED).body(productCreate);*/
     }
 
     @PutMapping(value = "/{id}")

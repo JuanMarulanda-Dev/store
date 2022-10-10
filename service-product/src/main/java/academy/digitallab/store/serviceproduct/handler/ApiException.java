@@ -1,17 +1,16 @@
 package academy.digitallab.store.serviceproduct.handler;
 
-import lombok.Getter;
-import lombok.RequiredArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 import org.springframework.http.HttpStatus;
 
-import java.time.ZonedDateTime;
+import java.time.LocalDateTime;
 
-@RequiredArgsConstructor
-@Getter
+@AllArgsConstructor
+@NoArgsConstructor
+@Data
 public class ApiException {
-    private final String message;
-    private final Throwable throwable;
-    private final HttpStatus httpStatus;
-    private final ZonedDateTime timestamp;
+    private String message;
+    //private final Throwable throwable;
+    //private HttpStatus httpStatus;
+    private LocalDateTime timestamp;
 }
