@@ -1,8 +1,9 @@
 spring:
   application:
-    name: service-product
+    name: product-service
   cloud:
     config:
+      enabled: true
       uri: http://localhost:8081
       username: root
       password: s3cr3t
